@@ -100,7 +100,7 @@ def clean_titles(data, includebrandname, includecolors):
     all_colors = '|'.join(mcolors.CSS4_COLORS.keys())
 
     if includecolors:
-      # Combine the regex patterns
+      # Extend the regex pattern by also including a list of all colors, in this way we also maintain colors in the case that they were listed in the title
       regex = f'({prev_regex})|({all_colors})'
     else:
       regex = prev_regex
